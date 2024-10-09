@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Knew It! You Love Me a Lot</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function displayUserName() {
+            let userName = localStorage.getItem("userName"); // Retrieve the stored name
+            if (userName) {
+                // Convert the first letter to uppercase and the rest to lowercase
+                userName =
+                    userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
+                document.getElementById("greeting").textContent = `I knew it, ${userName}! You Love Me a Lot!`;
+            } else {
+                document.getElementById("greeting").textContent = "I knew it! You Love Me a Lot!";
+            }
+        }
+    </script>
+</head>
+<body onload="displayUserName()"> <!-- Call the function when the page loads -->
+    <div class="container">
+        <div class="tenor-gif-embed" data-postid="253027946666209433" data-share-method="host" data-aspect-ratio="1.37853" data-width="100%">
+            <a href="https://tenor.com/view/mochi-cat-mochi-and-goma-goma-and-peach-mochi-mochi-peach-cat-gif-gif-253027946666209433">Mochi Cat GIF</a> from <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1 id="greeting"></h1> <!-- The name will be inserted here -->
+    </div>
+    <div class="footer">Made by Umer ❤️</div> <!-- Footer text -->
+</body>
+</html>
